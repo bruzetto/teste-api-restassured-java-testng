@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class TestaAPI</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class TestaAPI</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; TestaAPI</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">10.837s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Testo a API do Curso</td>
+<td class="success">quandoTestarAPICurso()</td>
+<td class="success">10.837s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	key=qaclick123
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;location&quot;: {
+        &quot;lat&quot;: -69.383494,
+        &quot;lng&quot;: 11.427362
+    },
+    &quot;accuracy&quot;: 50,
+    &quot;name&quot;: &quot;Allianz Park&quot;,
+    &quot;phone_number&quot;: &quot;(+69) 171 444 3214&quot;,
+    &quot;address&quot;: &quot;11, Palestra Italia&quot;,
+    &quot;types&quot;: [
+        &quot;soccer field&quot;,
+        &quot;green field&quot;
+    ],
+    &quot;website&quot;: &quot;http://google.com&quot;,
+    &quot;language&quot;: &quot;Brazil-PT&quot;
+}
+{&quot;status&quot;:&quot;OK&quot;,&quot;place_id&quot;:&quot;a8f58e48f013fbf4f84cfa6be4589e96&quot;,&quot;scope&quot;:&quot;APP&quot;,&quot;reference&quot;:&quot;37bb1dffd2263dc87be187a82583323d37bb1dffd2263dc87be187a82583323d&quot;,&quot;id&quot;:&quot;37bb1dffd2263dc87be187a82583323d&quot;}
+a8f58e48f013fbf4f84cfa6be4589e96
+Request method:	PUT
+Request URI:	https://rahulshettyacademy.com/maps/api/place/update/json?key=qaclick123
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	key=qaclick123
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;place_id&quot;: &quot;a8f58e48f013fbf4f84cfa6be4589e96&quot;,
+    &quot;address&quot;: &quot;66, EndereÃ§o Mais Novo&quot;,
+    &quot;key&quot;: &quot;qaclick123&quot;
+}
+HTTP/1.1 200 OK
+Date: Sun, 14 Mar 2021 23:09:28 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 38
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    &quot;msg&quot;: &quot;Address successfully updated&quot;
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&amp;place_id=a8f58e48f013fbf4f84cfa6be4589e96
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	key=qaclick123
+				place_id=a8f58e48f013fbf4f84cfa6be4589e96
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Date: Sun, 14 Mar 2021 23:09:31 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 272
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    &quot;location&quot;: {
+        &quot;latitude&quot;: &quot;-69.383494&quot;,
+        &quot;longitude&quot;: &quot;11.427362&quot;
+    },
+    &quot;accuracy&quot;: &quot;50&quot;,
+    &quot;name&quot;: &quot;Allianz Park&quot;,
+    &quot;phone_number&quot;: &quot;(+69) 171 444 3214&quot;,
+    &quot;address&quot;: &quot;66, EndereÃ§o Mais Novo&quot;,
+    &quot;types&quot;: &quot;soccer field,green field&quot;,
+    &quot;website&quot;: &quot;http://google.com&quot;,
+    &quot;language&quot;: &quot;Brazil-PT&quot;
+}
+{&quot;status&quot;:&quot;OK&quot;,&quot;place_id&quot;:&quot;a8f58e48f013fbf4f84cfa6be4589e96&quot;,&quot;scope&quot;:&quot;APP&quot;,&quot;reference&quot;:&quot;37bb1dffd2263dc87be187a82583323d37bb1dffd2263dc87be187a82583323d&quot;,&quot;id&quot;:&quot;37bb1dffd2263dc87be187a82583323d&quot;}
+66, EndereÃ§o Mais Novo
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.7</a> at 14/03/2021 20:09:33</p>
+</div>
+</div>
+</body>
+</html>
