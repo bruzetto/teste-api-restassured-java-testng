@@ -11,6 +11,48 @@ class TestaAPI {
 
     @Test
     @DisplayName("Testo a API do Curso")
+    public void quandoTestarAPICursoComPayload() {
+
+        JsonPath js = new JsonPath(payload.CoursePrice());
+
+        int countCourses = js.getInt("courses.size()");
+        System.out.println(countCourses);
+
+        int totalAmount = js.getInt("dashboard.purchaseAmount");
+        System.out.println(totalAmount);
+
+        String firstCourseName = js.get("courses[0].title");
+        System.out.println(firstCourseName);
+
+        for (int i = 0; i < countCourses; i++) {
+
+            System.out.println(js.get("courses["+i+"].title").toString());
+            System.out.println(js.get("courses["+i+"].price").toString());
+        }
+
+        for (int i = 0; i < countCourses; i++) {
+
+            if (js.get("courses["+i+"].title").toString().equalsIgnoreCase("RPA")) {
+                System.out.println(js.get("courses["+i+"].copies").toString());
+                break;
+            }
+        }
+
+        int sumAllCourses = 0;
+
+        for (int i = 0; i < countCourses; i++) {
+
+            for (int i2 = 0; i2 < js.getInt("courses["+i+"].copies"); i2++) {
+
+                sumAllCourses = sumAllCourses + js.getInt("courses["+i+"].price");
+            }
+        }
+
+        Assert.assertEquals(sumAllCourses, totalAmount);
+    }
+
+    @Test
+    @DisplayName("Testo a API do Curso")
     public void quandoTestarAPICurso() {
 
         RestAssured.baseURI = "https://rahulshettyacademy.com";
