@@ -4,6 +4,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -53,7 +57,7 @@ class TestaAPI {
 
     @Test
     @DisplayName("Testo a API do Curso")
-    public void quandoTestarAPICurso() {
+    public void quandoTestarAPICurso() throws IOException {
 
         RestAssured.baseURI = "https://rahulshettyacademy.com";
         String corpoRequisicao = "{\n" +
@@ -84,7 +88,8 @@ class TestaAPI {
                 given().log().all()
                         .queryParam("key", "qaclick123")
                         .header("Content-Type", "application/json")
-                        .body(corpoRequisicao)
+                        //.body(corpoRequisicao)
+                        .body(new String(Files.readAllBytes(Paths.get("C:\\Users\\Public\\Documents\\payload.txt"))))
                         .when()
                         .post("maps/api/place/add/json")
                         .then()
@@ -97,6 +102,18 @@ class TestaAPI {
         JsonPath js = new JsonPath(response);
         String placeId = js.getString("place_id");
         System.out.println(placeId);
+
+        //Get Place
+        String resposta = given().log().all()
+                .queryParam("key", "qaclick123")
+                .queryParam("place_id", placeId)
+                .when()
+                .get("maps/api/place/get/json")
+                .then()
+                .assertThat().log().all().statusCode(200)
+                .extract().response().asString();
+
+        System.out.println(resposta);
 
         //Update Place
         String newAddress = "66, Endereço Mais Novo";
