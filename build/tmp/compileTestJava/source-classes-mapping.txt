@@ -6,3 +6,5 @@ sumValidation.java
  sumValidation
 TesteAPI.java
  TestaAPI
+JiraRequests.java
+ JiraRequests
